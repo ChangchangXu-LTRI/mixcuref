@@ -14,28 +14,6 @@ require(abind)
   # require(doSNOW)
 
   #########################################################################################
-  mat.inv <- function(matx) {
-
-    detm = det(matx)
-    #2x2 matrix inverse;
-    if (ncol(matx) == 2) {
-      inv.matx = (1/detm) * matrix(c(matx[2,2],-matx[2,1],-matx[1,2],matx[1,1]), nrow = 2)
-    }
-
-    else {
-      #For any n>2 dimension square matrix;
-      adjug.matx <- matrix(rep(0, ncol(matx)^2), nrow = nrow(matx))
-      for (i in 1:nrow(matx)) {
-        for (j in 1:ncol(matx)) {
-          adjug.matx[i,j] <- (-1)^(i+j)*det(matx[-i,][,-j])
-        }
-      }
-      inv.matx <- t(adjug.matx/detm)
-    }
-
-    return(inv.matx)
-  }
-
   #########################################################################################
 
   design.matrix <- model.frame(formula, data = data, na.action = na.omit);
