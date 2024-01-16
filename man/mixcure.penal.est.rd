@@ -39,7 +39,9 @@ The mixcure.penal.est function returns an object of class 'mixcure' that encompa
   \item{loglikelihood} {returns the (penalized) maximum loglikelihood value.}
 }
 \references{
-Firth (1993)
+Firth, D. Bias reduction of maximum likelihood estimates. Biometrika 80, 27–38 (1993).
+
+Xu C, Bull SB. Penalized maximum likelihood inference under the mixture cure model in sparse data. Statistics in Medicine 2023; 42: 2134–2161.
 }
 \author{
 Changchang Xu
